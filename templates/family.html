@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}The Story of My Heritage{% endblock %}
+
+{% block head_extra %}
+  <!-- Tailwind CSS -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Video/GIF Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <img src="https://media.giphy.com/media/l2Sq1v7KTyF22A6c0/giphy.gif" alt="Heritage Hero" class="absolute w-auto min-w-full min-h-full max-w-none object-cover">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-6xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500 animate-pulse" data-aos="zoom-in">
+      The Story of My Heritage
+    </h1>
+    <p class="mt-6 text-xl md:text-2xl text-white max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+      A journey from the Atlas Mountains to the Moroccan coasts, intertwined with Amazigh resilience and nature’s beauty.
+    </p>
+  </div>
+</section>
+
+<!-- Amazigh Roots Section -->
+<section class="container mx-auto py-20 px-6 bg-gray-100 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-semibold text-gray-800" data-aos="fade-down">Amazigh Roots & Atlas Mountains</h2>
+    <p class="mt-4 text-lg text-gray-600 max-w-4xl mx-auto">
+      My ancestors thrived for centuries in harmony with the rugged Atlas peaks—embodying resilience, strength, and a deep bond with the land.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl group" data-aos="flip-left">
+      <img src="https://media.giphy.com/media/iDXBzkgeSfRbnp97mB/giphy.gif" alt="Atlas Mountains" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+        <p class="text-xl font-semibold">The Atlas Mountains: A Symbol of Strength</p>
+      </div>
+    </div>
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl group" data-aos="flip-right">
+      <img src="https://media.giphy.com/media/7GHRDluBmx9O8/giphy.gif" alt="Mountain to Ocean" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+        <p class="text-xl font-semibold">Journey from Mountains to Ocean</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rifi & Sossi Section -->
+<section class="container mx-auto py-20 px-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-semibold text-gray-800" data-aos="fade-down">Rifi & Sossi: A Cultural Tapestry</h2>
+    <p class="mt-4 text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+      From northern Rifi mountains to southern valleys, my dual heritage blends diverse languages, landscapes, and traditions.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl group" data-aos="zoom-in">
+      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTQzamVsYzVwMWlkcjV4ZWtoOGY4c2ZyZzBpN3RwemI4eGp1cjFuYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/8mDYRMpuZkZZTqT6bS/giphy.gif" alt="Rifi Coast" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+        <p class="text-lg font-semibold">Rifi Coast: Serenity Meets the Sea</p>
+      </div>
+    </div>
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl group" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://media.giphy.com/media/LqbBfKqnrvFkI/giphy.gif" alt="Ocean Waves" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+        <p class="text-lg font-semibold">The Ocean: A Timeless Connection</p>
+      </div>
+    </div>
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl group" data-aos="zoom-in" data-aos-delay="200">
+      <img src="{% static 'images/iii.jpg' %}" alt="Sossi Landscape" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+        <p class="text-lg font-semibold">Sossi Region: Mountains & Tranquility</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Legacy Section -->
+<section class="relative h-96 flex items-center justify-center overflow-hidden rounded-2xl mx-6 mb-20">
+  <img src="https://media.giphy.com/media/1wwv6MnSsQwP6/giphy.gif" alt="Legacy GIF" class="absolute w-auto min-w-full min-h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-purple-900/70"></div>
+  <div class="relative z-10 text-center px-6" data-aos="zoom-in">
+    <h2 class="text-4xl font-bold text-white mb-4">A Legacy Beyond Time</h2>
+    <p class="text-lg text-white max-w-3xl mx-auto leading-relaxed">
+      My heritage is a living connection to Morocco’s lands—from Atlas peaks to ocean shores—shaped by cultures standing strong for generations.
+    </p>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block script_extra %}
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+  </script>
+{% endblock %}

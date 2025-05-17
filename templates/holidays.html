@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static mathfilters %}
+
+{% block title %}Moroccan Holidays{% endblock %}
+
+{% block head_extra %}
+  <!-- Tailwind CSS -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Lottie Player for micro-animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <video autoplay muted loop class="absolute w-auto min-w-full min-h-full max-w-none object-cover">
+    <source src="{% static 'videos/moroccan-holiday-hero.mp4' %}" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-br from-red-900/70 to-purple-900/70"></div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-6xl md:text-7xl font-black tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 animate-pulse" data-aos="zoom-in">Moroccan Holidays</h1>
+    <p class="mt-6 text-xl md:text-2xl text-white uppercase" data-aos="fade-up" data-aos-delay="200">Experience Morocco’s vibrant traditions and festivities</p>
+    <a href="#holiday-list" class="mt-10 inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-xl transform hover:scale-105 transition duration-500" data-aos="zoom-in" data-aos-delay="400">
+      Explore Holidays
+      <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Holiday Cards -->
+<section id="holiday-list" class="container mx-auto py-20 px-6">
+  <div class="text-center mb-16">
+    <h2 class="text-5xl font-bold text-gray-800" data-aos="fade-down">Major Moroccan Celebrations</h2>
+    <p class="mt-4 text-lg text-gray-600" data-aos="fade-up" data-aos-delay="200">From national festivals to local Amazigh rites, discover them all.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Eid -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-left" data-aos-delay="0">
+      <img src="{% static 'images/eid.jpg' %}" alt="Eid Celebrations" class="w-full h-56 object-cover rounded-lg">
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_thWYk5bZAOg1O.json" background="transparent" speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+        <h3 class="mt-2 text-2xl font-extrabold">Eid al-Fitr & Eid al-Adha</h3>
+        <p class="mt-1 text-gray-200">Family reunions, feasting, and spiritual reflection mark these joyous events.</p>
+      </div>
+    </div>
+    <!-- Independence Day -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-left" data-aos-delay="100">
+      <img src="{% static 'images/independence.jpg' %}" alt="Independence Day" class="w-full h-56 object-cover rounded-lg">
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_vk7VesvyZEwuY.json" background="transparent" speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+        <h3 class="mt-2 text-2xl font-extrabold">Independence Day</h3>
+        <p class="mt-1 text-gray-200">Celebrated on November 18, honoring Morocco’s freedom from colonial rule.</p>
+      </div>
+    </div>
+    <!-- Yennayer -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-left" data-aos-delay="200">
+      <img src="{% static 'images/yennayer.jpeg' %}" alt="Yennayer" class="w-full h-56 object-cover rounded-lg">
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_HpFqiS.json" background="transparent" speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+        <h3 class="mt-2 text-2xl font-extrabold">Yennayer (Amazigh New Year)</h3>
+        <p class="mt-1 text-gray-200">Celebrated on January 12–13, marking the Amazigh agricultural new year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Highlights Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto text-center px-6" data-aos="zoom-in">
+    <h2 class="text-4xl font-semibold mb-12 text-gray-800">Holiday Highlights</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-3xl shadow-xl relative">
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-200 rounded-full animate-pulse"></div>
+        <div class="text-5xl">🎉</div>
+        <p class="mt-4 text-lg text-gray-700">Over 20 public and religious holidays celebrated yearly.</p>
+      </div>
+      <div class="p-8 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-3xl shadow-xl relative" data-aos="zoom-in" data-aos-delay="100">
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-yellow-200 rounded-full animate-pulse"></div>
+        <div class="text-5xl">📅</div>
+        <p class="mt-4 text-lg text-gray-700">Dates follow lunar and solar calendars—each year varies.</p>
+      </div>
+      <div class="p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl shadow-xl relative" data-aos="zoom-in" data-aos-delay="200">
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-blue-200 rounded-full animate-pulse"></div>
+        <div class="text-5xl">🕌</div>
+        <p class="mt-4 text-lg text-gray-700">Characterized by communal prayers, feasts, and performances.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action -->
+<section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center" data-aos="fade-up">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-4">Plan Your Visit Around a Festival</h2>
+    <p class="text-lg mb-6">Experience Morocco at its liveliest—time your trip with these celebrations.</p>
+    <a href="/culture" class="inline-block bg-white text-purple-600 font-semibold py-3 px-8 rounded-full shadow-lg transform hover:-translate-y-1 transition duration-500">Learn More</a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block script_extra %}
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, easing: 'ease-in-out-back', once: true });
+  </script>
+{% endblock %}

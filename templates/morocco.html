@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Discover Morocco{% endblock %}
+
+{% block head_extra %}
+  <!-- Tailwind CSS -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Lottie Player for micro-animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center" style="background-image: url('https://media.giphy.com/media/xqklsTVVXhPa/giphy.gif');">
+  <!-- Dark overlay to match family.html -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-6xl md:text-7xl font-black tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 animate-pulse">
+      Welcome to Morocco
+    </h1>
+    <p class="mt-6 text-xl md:text-2xl text-white uppercase letter-spacing-lg" data-aos="fade-up" data-aos-delay="200">
+      A magical land where tradition meets beauty
+    </p>
+    <a href="#explore" class="mt-10 inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-full shadow-xl transform hover:scale-105 transition duration-500" data-aos="zoom-in" data-aos-delay="400">
+      Explore More
+      <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Explore Section -->
+<section id="explore" class="container mx-auto py-20 px-6">
+  <div class="text-center mb-16">
+    <h2 class="text-5xl font-bold text-gray-800" data-aos="fade-down">Discover the Heart of Morocco</h2>
+    <p class="mt-4 text-lg text-gray-600" data-aos="fade-up" data-aos-delay="200">From vibrant souks to serene deserts, adventure awaits.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <!-- Culture Card -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-left" data-aos-delay="100">
+      <img src="{% static 'images/building.jpg' %}" alt="Culture" class="w-full h-64 object-cover mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition duration-500"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_svy4ivvy.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-3xl font-extrabold">Culture</h3>
+        <p class="mt-2 text-gray-200">Explore Morocco's deep-rooted traditions, music, and art.</p>
+      </div>
+    </div>
+    <!-- Nature Card -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-up" data-aos-delay="200">
+      <img src="{% static 'images/ifran.jpeg' %}" alt="Nature" class="w-full h-64 object-cover mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition duration-500"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_q5pk6p1k.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-3xl font-extrabold">Nature</h3>
+        <p class="mt-2 text-gray-200">From deserts to mountains to beaches, every view is breathtaking.</p>
+      </div>
+    </div>
+    <!-- Cuisine Card -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-right" data-aos-delay="300">
+      <img src="{% static 'images/couscouss.jpg' %}" alt="Cuisine" class="w-full h-64 object-cover mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition duration-500"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_jtqzqbin.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-3xl font-extrabold">Cuisine</h3>
+        <p class="mt-2 text-gray-200">Indulge in world-renowned Moroccan dishes like couscous and tagine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote Section -->
+<section class="relative bg-fixed bg-center bg-cover py-32" style="background-image: url('{% static 'images/wom.jpg' %}');">
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80"></div>
+  <div class="container mx-auto relative text-center text-white px-6" data-aos="zoom-in">
+    <blockquote class="text-4xl italic font-light">"To visit Morocco is to step into a timeless story."</blockquote>
+    <cite class="mt-4 block text-lg">— Moroccan Proverb</cite>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-semibold mb-12" data-aos="fade-up">Why Morocco?</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-gray-800">
+      <div class="space-y-2" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-6xl">🕌</div>
+        <div class="text-xl font-medium">9 UNESCO Heritage Sites</div>
+      </div>
+      <div class="space-y-2" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-6xl">🏜️</div>
+        <div class="text-xl font-medium">Desert Adventures</div>
+      </div>
+      <div class="space-y-2" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-6xl">🎶</div>
+        <div class="text-xl font-medium">100+ Music Styles</div>
+      </div>
+      <div class="space-y-2" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-6xl">🍲</div>
+        <div class="text-xl font-medium">World-famous Cuisine</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action -->
+<section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center" data-aos="fade-up">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold">Start Your Moroccan Journey</h2>
+    <p class="mt-4 text-lg">Dive deeper into Morocco’s culture, history, and landscapes now.</p>
+    <a href="/culture" class="mt-8 inline-block bg-white text-purple-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-500">
+      Learn More
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block script_extra %}
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, easing: 'ease-in-out-back', once: true });
+  </script>
+{% endblock %}

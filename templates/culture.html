@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Moroccan Culture{% endblock %}
+
+{% block head_extra %}
+  <!-- Tailwind CSS -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Video Section -->
+<section class="relative h-screen overflow-hidden">
+  <video autoplay muted loop class="absolute w-auto min-w-full min-h-full max-w-none object-cover">
+    <source src="{% static 'videos/morocco-culture-hero.mp4' %}" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+    <h1 class="text-6xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-pulse" data-aos="zoom-in">Explore Moroccan Culture</h1>
+    <p class="mt-4 text-xl md:text-2xl text-white uppercase" data-aos="fade-up" data-aos-delay="300">A journey through music, art, history, and tradition from the heart of Morocco</p>
+    <a href="#culture-sections" class="mt-8 inline-flex items-center bg-gradient-to-r from-red-500 to-yellow-500 hover:from-yellow-500 hover:to-red-500 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-500" data-aos="flip-up" data-aos-delay="500">
+      Discover More
+     <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Culture Sections -->
+<section id="culture-sections" class="container mx-auto py-20 px-6 space-y-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <!-- Music & Dance -->
+    <div class="relative group rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-right">
+      <img src="{% static 'images/music.jpeg' %}" alt="Music" class="object-cover w-full h-80 mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_i3mgl7gk.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-3xl font-extrabold">Traditional Music & Dance</h3>
+        <p class="mt-2">Moroccan music blends Amazigh rhythms, Andalusian melodies, and contemporary beats.</p>
+      </div>
+    </div>
+    <!-- Cuisine -->
+    <div class="relative group rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-left" data-aos-delay="100">
+      <img src="{% static 'images/Cuisine-r.jpeg' %}" alt="Cuisine" class="object-cover w-full h-80 mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_khzniaya.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-3xl font-extrabold">Moroccan Cuisine</h3>
+        <p class="mt-2">From spicy tagines to honey-drenched pastries, every bite tells a story.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <!-- Architecture -->
+    <div class="relative group rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-left">
+      <img src="{% static 'images/wass.jpeg' %}" alt="Architecture" class="object-cover w-full h-64 mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_gm6c9rg5.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-2xl font-bold">Moroccan Architecture</h3>
+        <p class="mt-2">Admire intricate zellige tilework, ornate arches, and riad courtyards.</p>
+      </div>
+    </div>
+    <!-- Handicrafts -->
+    <div class="relative group rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-up" data-aos-delay="100">
+      <img src="{% static 'images/qqq.png' %}" alt="Handicrafts" class="object-cover w-full h-64 mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zm3t7a2d.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-2xl font-bold">Artisan Handicrafts</h3>
+        <p class="mt-2">Discover handcrafted ceramics, carpets, and jewelry from skilled artisans.</p>
+      </div>
+    </div>
+    <!-- Hospitality -->
+    <div class="relative group rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500" data-aos="flip-right" data-aos-delay="200">
+      <img src="{% static 'images/po.jpg' %}" alt="Hospitality" class="object-cover w-full h-64 mix-blend-overlay opacity-90 group-hover:opacity-100 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-6 left-6 text-white">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_5ngs2ksb.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+        <h3 class="text-2xl font-bold">Moroccan Hospitality</h3>
+        <p class="mt-2">Experience sacred hospitality: mint tea ceremonies and heartfelt welcomes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language & Script & Festivals Combined -->
+<section class="container mx-auto py-20 px-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <!-- Language Card -->
+    <div class="relative p-8 bg-gradient-to-br from-green-100 to-blue-50 rounded-3xl shadow-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+      <div class="absolute -top-10 -right-10 w-32 h-32 bg-green-200 rounded-full opacity-50 animate-pulse"></div>
+      <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-200 rounded-full opacity-50 animate-pulse"></div>
+      <h3 class="text-3xl font-extrabold text-gray-800 mb-4 flex items-center">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_8ldF4Y.json" background="transparent" speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+        <span class="ml-4">Amazigh Language</span>
+      </h3>
+      <p class="text-lg text-gray-700 leading-relaxed">Tamazight, spoken by millions, carries millennia of stories and identity. Its rich phonetics and poetic cadence echo through mountain valleys and desert winds.</p>
+    </div>
+    <!-- Festivals Card -->
+    <div class="grid grid-cols-1 gap-8">
+      <div class="relative p-8 bg-white rounded-3xl shadow-2xl overflow-hidden" data-aos="fade-left" data-aos-delay="300">
+        <div class="absolute top-0 left-0 w-full h-2 bg-red-300"></div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-3 flex items-center">
+          <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_HpFqiS.json" background="transparent" speed="1" style="width:40px; height:40px;" loop autoplay></lottie-player>
+          <span class="ml-3">Yennayer - Amazigh New Year</span>
+        </h3>
+        <p class="text-gray-700">Celebrate the agricultural new year with vibrant rituals, rhythmic drumming, and communal feasts that usher in prosperity.</p>
+      </div>
+      <div class="relative p-8 bg-white rounded-3xl shadow-2xl overflow-hidden" data-aos="fade-left" data-aos-delay="400">
+        <div class="absolute top-0 left-0 w-full h-2 bg-yellow-300"></div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-3 flex items-center">
+          <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_touohxv0.json" background="transparent" speed="1" style="width:40px; height:40px;" loop autoplay></lottie-player>
+          <span class="ml-3">Cultural Festivals</span>
+        </h3>
+        <p class="text-gray-700">From the Timitar Music Festival to local Imilchil weddings, Morocco pulses with vibrant celebrations year-round.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action -->
+<section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center" data-aos="fade-up">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold">Experience Moroccan Culture</h2>
+    <p class="mt-4 text-lg">Dive deeper into Morocco’s vibrant heritage—contact us or plan your visit today.</p>
+    <a href="{% url 'contact' %}" class="mt-8 inline-block bg-white text-indigo-700 font-semibold py-3 px-8 rounded-full shadow-lg transform hover:-translate-y-1 transition duration-500">Get In Touch</a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block script_extra %}
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+  </script>
+{% endblock %}
